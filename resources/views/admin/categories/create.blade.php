@@ -11,7 +11,7 @@
 
                 <div class="panel-body">
                     {!! Form::open(['route' => 'categories.store']) !!}
-                        
+
                         @include('admin.categories.partials.form')
 
                     {!! Form::close() !!}

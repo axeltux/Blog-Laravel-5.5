@@ -9,7 +9,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Catergoría 
+                    Catergoría
                     <a href="{{ route('category', $post->category->slug) }}">
                         {{ $post->category->name }}
                     </a>
@@ -19,18 +19,18 @@
                     @if($post->file)
                         <img src="{{ $post->file }}" class="img-responsive">
                     @endif
-                    
+
                     {{ $post->excerpt }}
                     <hr>
                     {!! $post->body !!}
                     <hr>
-
+                    {{--
                     Etiquetas
                     @foreach($post->tags as $tag)
                     <a href="{{ route('tag', $tag->slug) }}">
                         {{ $tag->name }}
                     </a>
-                    @endforeach
+                    @endforeach --}}
                 </div>
             </div>
 

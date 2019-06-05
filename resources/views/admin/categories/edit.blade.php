@@ -11,7 +11,7 @@
 
                 <div class="panel-body">
                     {!! Form::model($category, ['route' => ['categories.update', $category->id], 'method' => 'PUT']) !!}
-                        
+
                         @include('admin.categories.partials.form')
 
                     {!! Form::close() !!}
