@@ -10,7 +10,7 @@ use App\Post;
 
 class PageController extends Controller
 {
-    
+
     public function blog(){
     	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
 
@@ -26,7 +26,7 @@ class PageController extends Controller
         return view('web.posts', compact('posts'));
     }
 
-    public function tag($slug){ 
+    public function tag($slug){
         $posts = Post::whereHas('tags', function($query) use ($slug) {
             $query->where('slug', $slug);
         })

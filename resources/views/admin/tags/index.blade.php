@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Lista de Etiquetas 
+                    Lista de Etiquetas
                     <a href="{{ route('tags.create') }}" class="pull-right btn btn-sm btn-primary">
                         Crear
                     </a>
@@ -37,13 +37,13 @@
                                     {!! Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
                                         <button class="btn btn-sm btn-danger">
                                             Eliminar
-                                        </button>                           
+                                        </button>
                                     {!! Form::close() !!}
                                 </td>
                             </tr>
                             @endforeach
-                        </tbody>   
-                    </table>     	
+                        </tbody>
+                    </table>
 
                     {{ $tags->render() }}
                 </div>

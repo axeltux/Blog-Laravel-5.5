@@ -25,7 +25,7 @@ class PostController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -64,7 +64,7 @@ class PostController extends Controller
         $post = Post::create($request->all());
         $this->authorize('pass', $post);
 
-        //IMAGE 
+        //IMAGE
         if($request->file('image')){
             $path = Storage::disk('public')->put('image',  $request->file('image'));
             $post->fill(['file' => asset($path)])->save();
@@ -120,7 +120,7 @@ class PostController extends Controller
 
         $post->fill($request->all())->save();
 
-        //IMAGE 
+        //IMAGE
         if($request->file('image')){
             $path = Storage::disk('public')->put('image',  $request->file('image'));
             $post->fill(['file' => asset($path)])->save();

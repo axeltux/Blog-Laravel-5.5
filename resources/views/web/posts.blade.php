@@ -15,7 +15,7 @@
                     @if($post->file)
                         <img src="{{ $post->file }}" class="img-responsive">
                     @endif
-                    
+
                     {{ $post->excerpt }}
                     <a href="{{ route('post', $post->slug) }}" class="pull-right">Leer más</a>
                 </div>
